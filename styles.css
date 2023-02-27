@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Code+Pro:wght@400;700&display=swap');
+
+/* Generic ================================================================= */
+
+:root {
+  --primary: #85DDDD;
+  --secondary: #E27396;
+  --background-primary: #002626;
+  --background-secondary: #EAFDFD;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Code Pro', monospace;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.background-primary {
+  background-color: var(--background-primary);
+}
+
+.background-primary * {
+  color: var(--background-secondary);
+}
+
+.background-secondary {
+  background-color: var(--background-secondary);
+}
+
+.background-secondary * {
+  color: var(--background-primary);
+}
+
+.inner {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  padding: 56px 24px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-section {
+  flex: 1;
+}
+
+.image {
+  object-fit: contain;
+  width: 100%;
+}
+
+.button {
+  background-color: var(--secondary);
+  padding: 12px 24px;
+  border-radius: 24px;
+  color: white;
+  width: fit-content;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Source Code Pro', monospace;
+  border: none;
+  transition: 200ms opacity;
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+/* Section ================================================================ */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section .image {
+  width: 60%;
+  box-shadow: -24px 24px 0px var(--background-primary);
+  height: 400px;
+  object-fit: cover;
+  margin-left: 30px;
+  margin-bottom: 24px;
+}
+
+.section h2 {
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.section h3 {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.section p {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.section p.small {
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.section p.subtext {
+  margin-top: -12px;
+  font-size: 14px;
+}
+
+.section .sub-section {
+  padding-left: 36px;
+  padding-right: 12px;
+}
+
+.section.background-primary .inner {
+  flex-direction: row-reverse;
+}
+
+.section.background-primary .image {
+  box-shadow: 24px 24px 0px var(--background-secondary);
+  margin-left: 0px;
+  margin-right: 30px;
+}
+
+.section.background-primary .sub-section {
+  padding-left: 12px;;
+  padding-right: 36px;
+}
+
+/* Header ================================================================ */
+
+.header {
+  background-color: var(--background-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .inner {
+  padding: 12px 24px;
+}
+
+.header-icon {
+  object-fit: contain;
+  height: 50px;
+  filter: drop-shadow(0px 0px 2px #EAFDFD);
+  margin-left: 24px;
+}
+
+.header-title {
+  font-size: 32px;
+  margin-left: 24px;
+  color: var(--background-secondary);
+}
+
+/* Supporters ================================================================ */
+
+.section.supporters .inner {
+  flex-direction: column;
+}
+
+.section.supporters h2 {
+  margin-bottom: 36px;
+}
+
+.section.supporters img {
+  margin: 16px;
+  width: calc(33.3% - 32px);
+  box-shadow: 8px 8px 0px var(--primary);
+}
+
+.section.supporters .supporters-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mailing ================================================================ */
+
+.section.mailing .inner {
+  flex-direction: column;
+}
+
+.section.mailing form > div {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.section.mailing form label {
+  font-family: 'Source Code Pro', monospace;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.section.mailing form input {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.section.mailing .clear.foot {
+  text-align: center;
+}
+
+/* Mailing ================================================================ */
+
+.footer {
+  background-color: var(--background-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .inner {
+  padding: 24px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer p {
+  text-align: center;
+  color: var(--background-secondary);
+}
+
+.footer .socials {
+  padding-bottom: 12px;
+}
+
+.footer .socials a {
+  color: var(--primary);
+  padding: 12px;
+  transition: 200ms opacity;
+}
+
+.footer .socials a:hover {
+  opacity: 0.5;
+}
+
+/* Responsive ================================================================ */
+
+@media (max-width: 770px) {
+
+  .section .image {
+    height: 300px;
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .section.background-primary .inner,
+  .section.background-secondary .inner {
+    flex-direction: column;
+  }
+
+  .section .image {
+    height: unset;
+    width: 80%;
+  }
+
+  .section .image {
+    margin-bottom: 48px;
+  }
+
+  .section .sub-section {
+    padding: 0 24px;
+  }
+}
